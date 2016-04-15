@@ -4,15 +4,15 @@ Realofit
 A simple library which give you ability to use realm object with retrofit convertor
 
 ```
-            @Override
-            public void onResponse(Call<LastQuestion> call, Response<LastQuestion> response) {
+@Override
+public void onResponse(Call<LastQuestion> call, Response<LastQuestion> response) {
 
-                // save it in realm easily
-                realmObj.beginTransaction();
-                realmObj.copyToRealmOrUpdate(response.body().getData().getChildren());
-                realmObj.commitTransaction();
+   // save it in realm easily
+   realmObj.beginTransaction();
+   realmObj.copyToRealmOrUpdate(response.body().getData().getChildren());
+   realmObj.commitTransaction();
 
-            }	
+}	
 ```
 
 ```
@@ -65,7 +65,6 @@ public class LastQuestionDataChildrenData extends RealmObject {
     }
 
 ```
-
 
 
 License
